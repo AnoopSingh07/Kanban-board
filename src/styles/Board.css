@@ -1,0 +1,213 @@
+.board-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 20px 30px;
+    background-color: #f5f5f5;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+.board-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.board-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 33px; 
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.columns {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex: 1 1 auto;
+    padding-top: 60px;
+    scrollbar-width: none;
+}
+
+.columns::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.column {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.column.empty {
+    background-color: rgba(240, 240, 240, 0.7);
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.column-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.column-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.column-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-small {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar img, .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.ticket-count {
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: #555;
+    margin-left: 10px;
+}
+
+.icon-group {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    padding: 1px 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.filter-icon {
+    margin-right: 8px;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 250px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+/* DisplayMenu styles */
+.display-menu {
+    font-family: Arial, sans-serif;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.menu-item label {
+    font-weight: bold;
+    color: #666;
+    margin-right: 8px;
+    flex: 1;
+}
+
+.menu-item select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: #f9f9f9;
+    flex: 2;
+}
